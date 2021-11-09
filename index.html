@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        
+
+
+    <title>Steppin' with Friends</title>
+</style>    
+</head>
+
+
+<style>
+
+ * {
+    font-family:Arial, Helvetica, sans-serif !important;
+    letter-spacing: 0.3vw;
+    box-sizing: border-box;
+} 
+
+body {
+}
+
+#lp-container {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 750px;
+    background-color: rgb(255, 254, 249);
+}
+
+.section-container {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 16vw;
+    max-width: 400px;
+}
+
+
+.cover-photo {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    margin: 10vw auto 14vw auto;
+    width: 80%;
+}
+
+.poster {
+  margin: 5vw auto; 
+  position: relative; 
+  display: block; 
+  width: 100%;
+}
+
+/* TICKETS SECTION */
+
+.section {
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 0.5vw;
+}
+
+.listen-section {
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1vw !important;
+}
+
+.sub-heading {
+    margin: 0.4vw auto;
+    position: relative;
+}
+
+
+/* FOOTER */
+
+.footer-image {
+    width: 80%;
+    margin: 10vw auto;
+    display: block;
+}
+
+.section-container iframe {
+    margin: 10vw auto;
+    display: block;
+}
+
+/* PAYPAL BUTTONS */
+
+
+    #paypal-button-container {
+          margin: 0 auto;
+          display: block;
+          width: 100%;
+          position: relative;
+          bottom: 7vw;
+          margin-bottom: 14vw;
+
+      }
+
+      h5 {
+          text-align: center;
+          margin-bottom: 6vw;
+          color: rgba(0,0,0,0.87) !important;
+      }
+
+      p {
+          text-align: center;
+      }
+
+      select {
+      padding: 0 1.5vw;
+      border: 1px solid #f2f2f2;
+      border-radius: 0.2vw;
+      height: 10vw;
+      margin-bottom: 6vw;
+      max-height: 70px;
+      background-color: rgb(255, 254, 249);
+      }
+
+      .donate-copy p {
+          text-align: left;
+          padding-top: 0;
+          margin-top: 0;
+      }
+
+      .form-subheading {
+        font-weight: 600; padding: 0; margin: 0;
+      }
+
+      .row {
+          margin-bottom: 3vw;
+      }
+
+      .pound-prefix {
+        font-weight: 800; position: relative;
+      }
+
+      .booking-terms {
+          position: relative;
+          font-size: 12px;
+          bottom: 3vw;
+          color: rgb(197, 197, 197);
+      }
+
+      .booking-terms2 {
+          font-size: 12px;
+          bottom: 3vw;
+          color: rgb(197, 197, 197);
+      }
+
+      .cathDonation {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 6vw;
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+.toast {
+            background-color: #03733F;
+            color: #FDE4B8;
+            padding: 10vw;
+            text-align: justify;
+            word-break: normal !important;
+          }
+
+#hiddenSubmitBtn {
+  visibility: hidden;
+  position: absolute;
+}
+
+
+</style>
+
+<body>
+    <div id="lp-container">
+
+        <p style="font-style: italic; color:rgb(92, 92, 92); padding-top: 8vw; margin-top: 0; margin-bottom: 0; font-size: 18px;">eclectic dance sounds with soul</p>
+        <p style="font-style: italic; color:rgb(92, 92, 92); font-size: 12px; margin-top: 0;">a Chester-based non-profit party</p>
+        <div>
+            <img src="images/SWF_LOGO_FINAL_TREATED.png" alt="" class="logo">
+        </div>
+
+
+        <!-- TICKETS FORM SECTION -->
+        <div class="section-container">
+            <a href="#tickets"><h5>TICKETS</h5></a>
+
+
+            <p style="font-weight: 700; line-height: 0;">Steppin' with Friends 001</p> 
+            <p style="padding-top: 0;">Il Bosco, Evan M, Thelonious Masters</p>
+
+            <div>
+              <img src="images/SWF_EVENT_A5.pdf" alt="" class="poster">
+            </div>
+
+            <div id="tickets" class="scrollSpy section">
+
+                <!-- TICKETS FORM -->
+                <div class="row">
+                    <form id="customerForm" class="col s12" action="contact.php" method="post">
+
+                        <select id="ticket" name="ticketAmount" class="browser-default">
+                            <option value="" disabled>Amount</option>
+                            <option value="11">1 ticket (£10 + BF)</option>
+                            <option value="22">2 tickets (£20 + BF)</option>
+                            <option value="33">3 tickets (£30 + BF)</option>
+                            <option value="44">4 tickets (£40 + BF)</option>
+                            <option value="55">5 tickets (£50 + BF)</option>
+                            <option value="0">I just want to donate</option>
+                        </select>
+
+                        <p class="booking-terms">*each ticket includes £1 booking fee</p>
+
+                      <div class="row">
+                        <div class="input-field col s6">
+                          <input placeholder="First name" value="" name="firstName" id="first_name" type="text" class="validate" required>
+                          <label for="first_name"></label>
+                        </div>
+                        <div class="input-field col s6">
+                          <input placeholder="Last name" name="lastName" id="last_name" type="text" class="validate" required>
+                          <label for="last_name"></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input placeholder="Email" name="email" id="email" type="email" class="validate" required>
+                          <label for="email"></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="input-field col s12">
+                          <input id="phone" name="phoneNumber" placeholder="Phone number" type="number" class="validate">
+                          <label for="phone"></label>
+                        </div>
+                      </div>
+
+                      <!-- Donation -->
+                      <div class="row" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
+                        <div class="input-field col s12">
+                            <div class="donate-copy">
+                                <p class="cathDonation">All profit goes to <a href="https://cath.org.uk/" target="_blank">Chester Aid to the Homeless</a></p>
+                                <p class="form-subheading">Add a donation</p>
+                            </div>
+                          <i class="pound-prefix">£<input style="width: 95%; text-align: center;" id="donate" name="donation" placeholder="10" type="number" min="0" maxlength="3" class="validate"></i>
+                          <label for="donate"></label>
+                        </div>
+                      </div>
+
+                      <!-- Total Price -->
+                      <div class="row" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
+                        <div class="input-field col s12">
+                            <div class="donate-copy">
+                                <p class="form-subheading">Total <span class="booking-terms2">(tickets + donation)</span></p>
+                            </div>
+                        <i class="pound-prefix">£<input id="totalPrice" placeholder="0" style="width: 95%; text-align: center; margin-bottom: 0 !important;" id="total" type="number" class="validate" readonly></i>
+                          <label for="donate"></label>
+                        </div>
+                      </div>
+                      
+
+                    </form>
+                  </div>
+
+                  <!-- PAYPAL BUTTONS -->
+
+                  <!-- Add the SDK -->
+                  <script src="https://www.paypal.com/sdk/js?client-id=Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa&currency=GBP&locale=en_GB"></script>
+
+                  <!-- Set up a container element for the button -->
+                  <div id="paypal-button-container"></div>
+                  
+
+            </div>
+        </div>
+        
+
+        <!-- LISTEN SECTION -->
+        <div class="section-container">
+            <h5>LISTEN</h5>
+            <div class="listen-section">
+                <iframe width="100%" height="300" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fmelodicdistraction%2Fsteppin-with-friends-with-evan-m-august-21%2F" frameborder="0" ></iframe>
+            </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="section-container">
+            <h5>CONTACT</h5>
+            <div class="section">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+      // Add ticket price and donation together to make total value
+
+      let ticket = document.getElementById('ticket');
+      let donation = document.getElementById('donate');
+      let totalPrice = document.getElementById('totalPrice');
+      let getTotalValue = () => {
+        let value1 = Number(donation.value);
+        let value2 = Number(ticket.value);
+        totalPrice.value = value1 + value2;
+      }
+      donation.addEventListener('input', getTotalValue);
+      ticket.addEventListener('input', getTotalValue);
+      getTotalValue();
+
+    </script>
+
+
+<!-- PAYPAL BUTTONS SCRIPT -->
+
+<script>
+
+// Script for going live:
+
+    // Add your client ID and secret
+    var PAYPAL_CLIENT = 'Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa';
+    var PAYPAL_SECRET = 'ELw52JnAh5AGW4lQBqqDH7-0hK7r4PztIA5kQ8pCVWfyx6mqnlb_PJYHQX68-XAA0nzn5VPHsChsah00';
+
+    // Point your server to the PayPal API
+    var PAYPAL_ORDER_API = 'https://api-m.paypal.com/v2/checkout/orders/';
+
+  
+
+  paypal.Buttons({
+
+
+    // Sets up the transaction when a payment button is clicked
+    createOrder: function (data, actions) {
+
+      var firstName = document.getElementById('first_name').value;
+      var lastName = document.getElementById('last_name').value;
+      var email = document.getElementById('email').value;
+      var phoneNumber = document.getElementById('phone').value;
+
+      if (firstName !== "" && lastName !== "" && email !== "" && phoneNumber !== "") {
+
+        return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: document.getElementById('totalPrice').value // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+          }
+        }]
+      });
+
+      } else {
+
+        var paypalButtons = document.getElementById('paypal-button-container');
+
+        // Fade buttons out and then back in
+        paypalButtons.style.transition = "opacity 0.5s ease";
+        paypalButtons.style.opacity = "0.3";
+        setTimeout(function() {
+          paypalButtons.style.opacity = "1";
+        }, 4000);
+
+        // Error message
+        var formIncorrectToast = '<span>Info not valid. Please double check your details are correct and all inputs are filled in.</span>';
+        M.toast({html: formIncorrectToast});
+
+      }
+
+    },
+
+    // Finalize the transaction after payer approval
+    onApprove: function (data, actions) {
+      return actions.order.capture().then(function (orderData) {
+        // Successful capture! For dev/demo purposes:
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+        var transaction = orderData.purchase_units[0].payments.captures[0];
+
+        // Display toast success message
+        var toastHTML = '<span>Thanks for your order! <br><br>You will soon get your tickets by email. <br><br>If you have any questions just get in touch.</span><button onclick="this.parentElement.remove()" class="btn-flat toast-action">X</button>';
+        M.toast({html: toastHTML, displayLength: Infinity});
+
+        // Submit HTML Form with customer details
+        document.getElementById("customerForm").submit();
+
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
+
+
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
