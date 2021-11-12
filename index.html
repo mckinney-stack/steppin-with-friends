@@ -5,346 +5,849 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- font awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-        
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
     <title>Steppin' with Friends</title>
 </style>    
 </head>
 
-
 <style>
 
- * {
-    font-family:Arial, Helvetica, sans-serif !important;
-    letter-spacing: 0.3vw;
+  * {
+    font-family: 'Poppins', sans-serif !important;
     box-sizing: border-box;
-} 
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+  }
 
-body {
-}
-
-#lp-container {
+  #lp-container {
     position: relative;
     display: block;
     margin: 0 auto;
-    max-width: 750px;
     background-color: rgb(255, 254, 249);
-}
+    overflow: visible;
+  }
 
-.section-container {
-    width: 80%;
+  .section-container {
+    width: 85%;
     margin: 0 auto;
     display: block;
-    margin-bottom: 16vw;
-    max-width: 400px;
-}
+    margin-bottom: 12vw;
+    text-align: center;
+  }
 
-
-.cover-photo {
+  .logo {
     display: block;
-    margin: 0 auto;
-}
+    margin: auto auto 16vw auto;
+    padding-top: 4vw;
+    width: 84%;
+  }
 
-.logo {
+  .poster {
+    margin: 12vw auto 6vw auto;
+    position: relative;
     display: block;
-    margin: 10vw auto 14vw auto;
-    width: 80%;
+    width: 100%;
 }
 
-.poster {
-  margin: 5vw auto; 
-  position: relative; 
-  display: block; 
-  width: 100%;
+.gallery-subheading {
+  color: rgb(92, 92, 92);
+  display: inline-block; 
+  text-align: center; 
+  font-weight: 600;
+  margin: 0 auto;
 }
 
-/* TICKETS SECTION */
+.hide-on-small {
+  visibility: hidden;
+}
 
-.section {
+  /* TICKETS SECTION */
+
+  .section {
     height: fit-content;
     width: 100%;
     margin: 0 auto;
     border-radius: 0.5vw;
-}
+  }
 
-.listen-section {
+  .listen-section {
     height: fit-content;
     width: 100%;
     margin: 0 auto;
     border-radius: 1vw !important;
-}
+  }
 
-.sub-heading {
+  .sub-heading {
     margin: 0.4vw auto;
     position: relative;
-}
+  }
 
+  .tickets-subheading {
+    font-weight: 700; 
+    line-height: 0; 
+    margin-top: 10vw;
+  }
 
-/* FOOTER */
+  .tickets-subheading-2 {
+    padding-top: 3vw;
+    margin-bottom: 6vw;
+  }
 
-.footer-image {
+  /* FOOTER */
+
+  .footer-image {
     width: 80%;
     margin: 10vw auto;
     display: block;
+  }
+
+  .section-container iframe {
+    margin: 10vw auto;
+    display: block;
+    width: 100%;
+  }
+
+  /* PAYPAL BUTTONS */
+  #paypal-button-container {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 14vw;
+    margin-bottom: 8vw;
+    z-index: 1;
+  }
+
+  h5 {
+    text-align: center;
+    margin-bottom: 6vw;
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  select {
+    padding: 0 1.5vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 0.2vw;
+    height: 10vw;
+    margin-bottom: 6vw;
+    max-height: 70px;
+    background-color: rgb(255, 254, 249);
+  }
+
+  .donate-copy {
+    text-align: left;
+  }
+
+  .donate-copy p {
+    text-align: left;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .form-subheading {
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+
+  .row {
+    margin-bottom: 3vw;
+  }
+
+  .pound-prefix {
+    font-weight: 800;
+    position: relative;
+  }
+
+  .booking-terms {
+    position: relative;
+    bottom: 4vw;
+    color: rgb(197, 197, 197);
+    margin-bottom: 5vw;
+}
+  }
+
+  .booking-terms2 {
+    font-size: 12px;
+    bottom: 3vw;
+    color: rgb(197, 197, 197);
+  }
+
+  .cathDonation {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 6vw;
+  }
+
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+
+  .toast {
+    background-color: #03733F;
+    color: #FDE4B8;
+    padding: 10vw;
+    text-align: justify;
+    word-break: normal !important;
+  }
+
+  #hiddenSubmitBtn {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .enquiries {
+    color:rgb(92, 92, 92);
+    font-size: 12px;
+  }
+
+  .slogan {
+    font-style: italic;
+    color: rgb(92, 92, 92);
+    padding-top: 18vw;
+    margin-bottom: 0;
+    font-size: 4.8vw;
+    background-color: rgb(255, 254, 249);
+  }
+
+  .slogan-small {
+    color: rgb(92, 92, 92);
+    margin-top: -1vw;
+    padding-top: 0;
+    font-size: 3.4vw;
+    background-color: rgb(255, 254, 249);
+  }
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #FDE2B5;
+    position: relative;
+    display: block;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1vw;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: all 0.7s ease;
+    text-align: center;
+    font-size: 4vw;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse
+over it (hover) */
+.accordion-1.active {
+  background-color: #037242ee;
+  color: #fde2b2;
+}
+
+.accordion-1:focus {
+  background-color: #037242ee !important;
+  color: #fde2b2;
+}
+
+.accordion-2.active {
+  background-color: #012f8cdc;
+  color: #fde2b2;
+}
+
+.accordion-2:focus {
+  background-color: #012f8cdc !important;
+  color: #fde2b2;
+}
+
+.accordion-3.active {
+  background-color: #f69103d5 !important;
+  color: #fde2b2;
+}
+
+.accordion-3:focus {
+  background-color: #f69103d5 !important;
+  color: #fde2b2;
+}
+
+.accordion-4.active {
+  background-color: #c60000c9 !important;
+  color: #fde2b2;
+}
+
+.accordion-4:focus {
+  background-color: #c60000c9 !important;
+  color: #fde2b2;
+}
+
+.accordion:focus {
+  width: 92% !important;
+  border-radius: 4vw;
+}
+
+button:focus {
+  transition: none !important;
+}
+
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+padding: 0;
+background-color: rgb(255, 254, 249);
+display: none;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.5s ease-out;
+}
+
+button.accordion {
+  letter-spacing: 0.5vw;
+  font-weight: 600;
+}
+
+.accordion-1 {
+  border-radius: 7vw 7vw 0 0;
+}
+
+.accordion-4 {
+  border-radius: 0 0 1vw 1vw;
+}
+
+.accordion-container {
+  margin-bottom: 16vw;
+  align-self: center;
+}
+
+
+.bottom-nav {
+    width: 100%;
+    background-color:rgba(92, 92, 92, 0.801);
+  }
+
+  .bottom-nav-inner-container {
+    height: 6vw;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bottom-nav-inner-container p {
+    font-size: 2.4vw;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6vw; 
+    }
+
+  div.panel.show {
+    display: block !important;
+}
+
+.cover-photo {
+    display: block;
+    position: relative;
+    background-image: url(images/SWF-cover.jpg);
+    background-repeat: no-repeat;
+    height: 8vw;
+    width: 100%;
+    overflow: hidden;
+    background-position: 0% 70%;
+    background-size: 202%;
+}
+
+.header {
+  width: 100%;
+}
+
+  .cover-photo2 {
+    display: block;
+    position: fixed;
+    background-image: url(images/SWF-cover.jpg);
+    background-repeat: no-repeat;
+    min-height: 10vw;
+    width: 100%;
+    overflow: hidden;
+    background-position: 22% 13%;
+    background-size: 202%;
+    transform: rotate(180deg);
+    border-top: 2vw solid rgb(92, 92, 92);
+    margin-bottom: 4vw;
+    z-index: 10;
+    transition: min-height 0.4s ease;
+    top: 0px;
+}
+
+.cover-photo2:hover {
+  min-height: 30vw;
+}
+
+
+
+
+
+
+
+
+
+/* Desktop Styles */
+@media only screen and (min-width: 600px) {
+
+  .hide-on-small {
+  visibility: visible;
+}
+
+
+body {
+    background-image: url('images/ernest-brillo-Y9Idgte8yZk-unsplash.jpg');
+    background-repeat: repeat;
+    background-size: 560px auto;
+    background-position-x: -234px;
+    background-position-y: -151px;
+  }
+
+  .cover-photo2 {
+    height: 48px;
+    display: block;
+    position: fixed;
+    background-image: url(images/SWF-cover.jpg);
+    background-repeat: no-repeat;
+    min-height: 48px;
+    width: 100%;
+    overflow: hidden;
+    background-position: 22% 13%;
+    background-size: 202%;
+    transform: rotate(180deg);
+    border-top: 8px solid rgb(92, 92, 92);
+    margin-bottom: 32px;
+    z-index: 10;
+    transition: min-height 0.4s ease;
+  }
+
+.cover-photo2:hover {
+  min-height: 96px;
+}
+
+
+.desktopFlexContainer {
+  visibility: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(255, 254, 249);
+  border-radius: 96px 4px 96px 4px;
+}
+
+.logo {
+  height: 280px;
+  width: auto;
+  margin-bottom: 24px;
+}
+
+.slogan {
+  font-size: 20px;
+  padding-top: 0;
+  margin-bottom: 12px;
+}
+
+.slogan-small {
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+#lp-container {
+  max-width: 960px;
+  min-height: 60vw;
+  border-collapse: collapse;
+  position: relative;
+  top: 128px;
+  margin-bottom: 144px;
+  border-radius: 96px 4px 96px 4px;
+  overflow: visible;
+}
+
+.bottom-nav {
+  visibility: hidden;
+}
+
+
+.tickets-subheading {
+    font-weight: 700; 
+    line-height: 0; 
+    margin-top: 64px;
+    margin-bottom: 16px;
+  }
+
+  
+  .tickets-subheading-2 {
+    padding-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .booking-terms {
+    font-size: 14px;
+    color: rgb(160, 160, 160);
+    bottom: 0;
+    margin-bottom: 48px;
+  }
+
+  select {
+    text-align: center;
+    border: 1px solid #f2f2f2;
+    border-radius: 0.2vw;
+    height: 64px;
+    margin-bottom: 16px;
+    max-height: 70px;
+    background-color: rgb(255, 254, 249);
+}
+
+.donate-copy {
+  text-align: left;
+}
+
+.cathDonation {
+  margin-bottom: 24px;
+}
+
+.row {
+  margin-bottom: 24px;
+}
+
+#customer-form {
+  margin-bottom: 48px;
+}
+
+#paypal-button-container {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    position: relative;
+    bottom: 96px;
+    z-index: 1;
+    width: 100%;
+}
+
+/* desktop */
+.cover-photo {
+    display: block;
+    position: relative;
+    background-image: url(images/SWF-cover.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-position: 0% 70%;
+    background-size: 202%;
+    border-top: 8px solid rgb(92, 92, 92);
+}
+
+.sloganAndLogoContainer {
+  width: 480px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.logoContainer {
+  align-self: center;
+}
+
+.accordion-container {
+  box-sizing: border-box;
+  width: 480px;
+  align-self: flex-start;
+  margin-top: 36px;
+  margin-right: 24px;
+}
+
+.accordion {
+  height: 56px;
+  margin-bottom: 8px;
+
+}
+
+button.accordion {
+  font-size: 20px;
+  letter-spacing: 1px;
+  justify-content: center;
+}
+
+.accordion-1 {
+  margin-top: 96px;
+  border-radius: 4px 24px 4px 4px;
+}
+
+.accordion-2 {
+  border-radius: 4px 4px 4px 4px;
+}
+
+.accordion-3 {
+  border-radius: 4px 4px 24px 4px;
+}
+
+.poster {
+  width: 100%;
+  margin: 64px auto 32px auto;
 }
 
 .section-container iframe {
-    margin: 10vw auto;
+    margin: 64px auto 16px auto;
     display: block;
 }
 
-/* PAYPAL BUTTONS */
 
-
-    #paypal-button-container {
-          margin: 0 auto;
-          display: block;
-          width: 100%;
-          position: relative;
-          bottom: 7vw;
-          margin-bottom: 14vw;
-
-      }
-
-      h5 {
-          text-align: center;
-          margin-bottom: 6vw;
-          color: rgba(0,0,0,0.87) !important;
-      }
-
-      p {
-          text-align: center;
-      }
-
-      select {
-      padding: 0 1.5vw;
-      border: 1px solid #f2f2f2;
-      border-radius: 0.2vw;
-      height: 10vw;
-      margin-bottom: 6vw;
-      max-height: 70px;
-      background-color: rgb(255, 254, 249);
-      }
-
-      .donate-copy p {
-          text-align: left;
-          padding-top: 0;
-          margin-top: 0;
-      }
-
-      .form-subheading {
-        font-weight: 600; padding: 0; margin: 0;
-      }
-
-      .row {
-          margin-bottom: 3vw;
-      }
-
-      .pound-prefix {
-        font-weight: 800; position: relative;
-      }
-
-      .booking-terms {
-          position: relative;
-          font-size: 12px;
-          bottom: 3vw;
-          color: rgb(197, 197, 197);
-      }
-
-      .booking-terms2 {
-          font-size: 12px;
-          bottom: 3vw;
-          color: rgb(197, 197, 197);
-      }
-
-      .cathDonation {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 6vw;
-      }
-
-      /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+@media only screen and (min-width: 800px) {
+
+  .logo {
+    height: 360px;
+  }
+
 }
 
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .accordion-container {
+    box-sizing: border-box;
+    width: 480px;
+    align-self: flex-start;
+    /* margin-bottom: 25px; */
+    margin-top: -24px;
+    /* margin-right: 24px; */
+    transition: none;
+}
 
-.toast {
-            background-color: #03733F;
-            color: #FDE4B8;
-            padding: 10vw;
-            text-align: justify;
-            word-break: normal !important;
-          }
+.slogan {
+  letter-spacing: 0;
+  font-size: 16px;
+  margin-bottom: 2px;
+}
 
-#hiddenSubmitBtn {
-  visibility: hidden;
-  position: absolute;
+.slogan-small {
+  letter-spacing: 0;
+  font-size: 12px;
+}
 }
 
 
 </style>
 
-<body>
-    <div id="lp-container">
+<body id="body">
 
-        <p style="font-style: italic; color:rgb(92, 92, 92); padding-top: 8vw; margin-top: 0; margin-bottom: 0; font-size: 18px;">eclectic dance sounds with soul</p>
-        <p style="font-style: italic; color:rgb(92, 92, 92); font-size: 12px; margin-top: 0;">a Chester-based non-profit party</p>
-        <div>
-            <img src="images/SWF_LOGO_FINAL_TREATED.png" alt="" class="logo">
+  <div class="header">
+    <div class="cover-photo2">
+    </div>
+  </div>
+
+  <div id="lp-container">
+
+    <div class="desktopFlexContainer">
+      
+      <div class="sloganAndLogoContainer">
+        <!-- Slogans -->
+        <div class="slogan-container">
+          <p class="slogan">eclectic dance sounds with soul</p>
+          <p class="slogan-small">a Chester-based non-profit party</p>
+          <!-- Email -->
+          <p class="hide-on-small enquiries">Enquiries > <span style="text-decoration: underline">steppinwithfriends@gmail.com</span></p>
         </div>
 
 
-        <!-- TICKETS FORM SECTION -->
+        <!-- Logo -->
+        <div class="logoContainer">
+          <img src="images/SWF_LOGO_FINAL_TREATED.png" alt="" class="logo">
+        </div>
+      </div>
+      
+      <div class="accordion-container">
+
+      <!-- TICKETS FORM SECTION -->
+      <button class="accordion accordion-1">Tickets</button>
+      <div class="panel panel-1">
         <div class="section-container">
-            <a href="#tickets"><h5>TICKETS</h5></a>
 
+          <p class="tickets-subheading">Steppin' with Friends 001</p>
+          <p class="tickets-subheading-2">Il Bosco, Evan M, Thelonious Masters</p>
 
-            <p style="font-weight: 700; line-height: 0;">Steppin' with Friends 001</p> 
-            <p style="padding-top: 0;">Il Bosco, Evan M, Thelonious Masters</p>
+          <div id="tickets" class="section">
 
-            <div>
-              <img src="images/SWF_EVENT_A5.pdf" alt="" class="poster">
-            </div>
+            <!-- TICKETS FORM -->
+            <div class="row">
+              <form id="customerForm" class="col s12" action="contact.php" method="post">
 
-            <div id="tickets" class="scrollSpy section">
+                <select id="ticket" name="ticketAmount" class="browser-default">
+                  <option value="" disabled>Amount</option>
+                  <option value="11">1 ticket (£10 + BF)</option>
+                  <option value="22">2 tickets (£20 + BF)</option>
+                  <option value="33">3 tickets (£30 + BF)</option>
+                  <option value="44">4 tickets (£40 + BF)</option>
+                  <option value="55">5 tickets (£50 + BF)</option>
+                  <option value="0">I just want to donate</option>
+                </select>
 
-                <!-- TICKETS FORM -->
+                <p class="booking-terms">*each ticket includes £1 booking fee</p>
+
                 <div class="row">
-                    <form id="customerForm" class="col s12" action="contact.php" method="post">
-
-                        <select id="ticket" name="ticketAmount" class="browser-default">
-                            <option value="" disabled>Amount</option>
-                            <option value="11">1 ticket (£10 + BF)</option>
-                            <option value="22">2 tickets (£20 + BF)</option>
-                            <option value="33">3 tickets (£30 + BF)</option>
-                            <option value="44">4 tickets (£40 + BF)</option>
-                            <option value="55">5 tickets (£50 + BF)</option>
-                            <option value="0">I just want to donate</option>
-                        </select>
-
-                        <p class="booking-terms">*each ticket includes £1 booking fee</p>
-
-                      <div class="row">
-                        <div class="input-field col s6">
-                          <input placeholder="First name" value="" name="firstName" id="first_name" type="text" class="validate" required>
-                          <label for="first_name"></label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input placeholder="Last name" name="lastName" id="last_name" type="text" class="validate" required>
-                          <label for="last_name"></label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <input placeholder="Email" name="email" id="email" type="email" class="validate" required>
-                          <label for="email"></label>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <input id="phone" name="phoneNumber" placeholder="Phone number" type="number" class="validate">
-                          <label for="phone"></label>
-                        </div>
-                      </div>
-
-                      <!-- Donation -->
-                      <div class="row" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
-                        <div class="input-field col s12">
-                            <div class="donate-copy">
-                                <p class="cathDonation">All profit goes to <a href="https://cath.org.uk/" target="_blank">Chester Aid to the Homeless</a></p>
-                                <p class="form-subheading">Add a donation</p>
-                            </div>
-                          <i class="pound-prefix">£<input style="width: 95%; text-align: center;" id="donate" name="donation" placeholder="10" type="number" min="0" maxlength="3" class="validate"></i>
-                          <label for="donate"></label>
-                        </div>
-                      </div>
-
-                      <!-- Total Price -->
-                      <div class="row" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
-                        <div class="input-field col s12">
-                            <div class="donate-copy">
-                                <p class="form-subheading">Total <span class="booking-terms2">(tickets + donation)</span></p>
-                            </div>
-                        <i class="pound-prefix">£<input id="totalPrice" placeholder="0" style="width: 95%; text-align: center; margin-bottom: 0 !important;" id="total" type="number" class="validate" readonly></i>
-                          <label for="donate"></label>
-                        </div>
-                      </div>
-                      
-
-                    </form>
+                  <div class="input-field col s6">
+                    <input placeholder="First name" value="" name="firstName" id="first_name" type="text"
+                      class="validate" required>
+                    <label for="first_name"></label>
                   </div>
+                  <div class="input-field col s6">
+                    <input placeholder="Last name" name="lastName" id="last_name" type="text" class="validate" required>
+                    <label for="last_name"></label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input placeholder="Email" name="email" id="email" type="email" class="validate" required>
+                    <label for="email"></label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="phone" name="phoneNumber" placeholder="Phone number" type="number" class="validate">
+                    <label for="phone"></label>
+                  </div>
+                </div>
 
-                  <!-- PAYPAL BUTTONS -->
+                <!-- Donation -->
+                <div class="row" style="margin-bottom: 0 !important; padding-bottom: 0 !important;">
+                  <div class="input-field col s12">
+                    <div class="donate-copy">
+                      <p class="cathDonation">All profit goes to <a href="https://cath.org.uk/" target="_blank">Chester
+                          Aid to
+                          the Homeless</a></p>
+                      <p class="form-subheading">Add a donation</p>
+                    </div>
+                    <i class="pound-prefix">£<input style="width: 95%; text-align: center;" id="donate" name="donation"
+                        placeholder="10" type="number" min="0" maxlength="3" class="validate"></i>
+                    <label for="donate"></label>
+                  </div>
+                </div>
 
-                  <!-- Add the SDK -->
-                  <script src="https://www.paypal.com/sdk/js?client-id=Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa&currency=GBP&locale=en_GB"></script>
+                <!-- Total Price -->
+                <div class="row" style="text-align: center; margin-bottom: 48px;">
+                  <div class="input-field col s12">
+                    <div class="donate-copy">
+                      <p class="form-subheading">Total <span class="booking-terms2">(tickets + donation)</span></p>
+                    </div>
+                    <i class="pound-prefix">£<input id="totalPrice" placeholder="0"
+                        style="width: 95%; text-align: center; margin-bottom: 0 !important;" id="total" type="number"
+                        class="validate" readonly></i>
+                    <label for="donate"></label>
+                  </div>
+                </div>
 
-                  <!-- Set up a container element for the button -->
-                  <div id="paypal-button-container"></div>
-                  
-
+              </form>
             </div>
-        </div>
-        
 
+            <!-- PAYPAL BUTTONS -->
+            <!-- Add the SDK -->
+            <script
+              src="https://www.paypal.com/sdk/js?client-id=Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa&currency=GBP&locale=en_GB">
+            </script>
+            <!-- Set up a container element for the button -->
+            <div id="paypal-button-container"></div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- LISTEN -->
+      <button class="accordion accordion-2">Radio</button>
+      <div class="panel panel-2">
         <!-- LISTEN SECTION -->
         <div class="section-container">
-            <h5>LISTEN</h5>
-            <div class="listen-section">
-                <iframe width="100%" height="300" src="https://www.mixcloud.com/widget/iframe/?feed=%2Fmelodicdistraction%2Fsteppin-with-friends-with-evan-m-august-21%2F" frameborder="0" ></iframe>
-            </div>
-        </div>
+          <div class="listen-section">
+            <iframe width="100%" height="300" id="mixcloud"
+              src="https://www.mixcloud.com/widget/iframe/?feed=%2Fmelodicdistraction%2Fsteppin-with-friends-with-evan-m-august-21%2F"
+              frameborder="0"></iframe>
+          </div>
 
-        <!-- CONTACT SECTION -->
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <button class="accordion accordion-3">Gallery</button>
+      <div class="panel panel-3">
         <div class="section-container">
-            <h5>CONTACT</h5>
-            <div class="section">
-
-            </div>
+          <div>
+            <img src="images/0001.jpg" alt="" class="poster">
+            <h6 class="gallery-subheading">Steppin' with Friends 001</h6>
+          </div>
         </div>
+      </div>
 
+      <!-- CONTACT SECTION -->
+      <!-- <button class="accordion accordion-4">Contact</button>
+      <div class="panel panel-4">
+        <div class="section-container">
+          
+        </div>
+      </div> -->
+
+      </div>
+
+  </div>
+
+  </div>
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav">
+    <div class="bottom-nav-inner-container">
+      <p>Enquiries > <span style="text-decoration: underline">steppinwithfriends@gmail.com</span></p>
     </div>
+  </div> 
+  <div class="cover-photo"></div>
 
 
-    <script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-      // Add ticket price and donation together to make total value
+  <!-- Add ticket price and donation together to make total value -->
+  <script>
+    let ticket = document.getElementById('ticket');
+    let donation = document.getElementById('donate');
+    let totalPrice = document.getElementById('totalPrice');
+    let getTotalValue = () => {
+      let value1 = Number(donation.value);
+      let value2 = Number(ticket.value);
+      totalPrice.value = value1 + value2;
+    }
+    donation.addEventListener('input', getTotalValue);
+    ticket.addEventListener('input', getTotalValue);
+    getTotalValue();
+  </script>
 
-      let ticket = document.getElementById('ticket');
-      let donation = document.getElementById('donate');
-      let totalPrice = document.getElementById('totalPrice');
-      let getTotalValue = () => {
-        let value1 = Number(donation.value);
-        let value2 = Number(ticket.value);
-        totalPrice.value = value1 + value2;
-      }
-      donation.addEventListener('input', getTotalValue);
-      ticket.addEventListener('input', getTotalValue);
-      getTotalValue();
-
-    </script>
-
-
-<!-- PAYPAL BUTTONS SCRIPT -->
-
-<script>
-
-// Script for going live:
+  <!-- Paypal Buttons Script -->
+  <script>
+    // Script for going live:
 
     // Add your client ID and secret
     var PAYPAL_CLIENT = 'Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa';
@@ -353,76 +856,148 @@ input[type=number] {
     // Point your server to the PayPal API
     var PAYPAL_ORDER_API = 'https://api-m.paypal.com/v2/checkout/orders/';
 
-  
-
-  paypal.Buttons({
 
 
-    // Sets up the transaction when a payment button is clicked
-    createOrder: function (data, actions) {
+    paypal.Buttons({
 
-      var firstName = document.getElementById('first_name').value;
-      var lastName = document.getElementById('last_name').value;
-      var email = document.getElementById('email').value;
-      var phoneNumber = document.getElementById('phone').value;
 
-      if (firstName !== "" && lastName !== "" && email !== "" && phoneNumber !== "") {
+      // Sets up the transaction when a payment button is clicked
+      createOrder: function (data, actions) {
 
-        return actions.order.create({
-        purchase_units: [{
-          amount: {
-            value: document.getElementById('totalPrice').value // Can reference variables or functions. Example: `value: document.getElementById('...').value`
-          }
-        }]
-      });
+        var firstName = document.getElementById('first_name').value;
+        var lastName = document.getElementById('last_name').value;
+        var email = document.getElementById('email').value;
+        var phoneNumber = document.getElementById('phone').value;
 
-      } else {
+        if (firstName !== "" && lastName !== "" && email !== "" && phoneNumber !== "") {
 
-        var paypalButtons = document.getElementById('paypal-button-container');
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: document.getElementById('totalPrice')
+                  .value // Can reference variables or functions. Example: `value: document.getElementById('...').value`
+              }
+            }]
+          });
 
-        // Fade buttons out and then back in
-        paypalButtons.style.transition = "opacity 0.5s ease";
-        paypalButtons.style.opacity = "0.3";
-        setTimeout(function() {
-          paypalButtons.style.opacity = "1";
-        }, 4000);
+        } else {
 
-        // Error message
-        var formIncorrectToast = '<span>Info not valid. Please double check your details are correct and all inputs are filled in.</span>';
-        M.toast({html: formIncorrectToast});
+          var paypalButtons = document.getElementById('paypal-button-container');
 
+          // Fade buttons out and then back in
+          paypalButtons.style.transition = "opacity 0.5s ease";
+          paypalButtons.style.opacity = "0.3";
+          setTimeout(function () {
+            paypalButtons.style.opacity = "1";
+          }, 4000);
+
+          // Error message
+          var formIncorrectToast =
+            '<span>Info not valid. Please double check your details are correct and all fields are filled in.</span>';
+          M.toast({
+            html: formIncorrectToast
+          });
+
+        }
+
+      },
+
+      // Finalize the transaction after payer approval
+      onApprove: function (data, actions) {
+        return actions.order.capture().then(function (orderData) {
+          // Successful capture! For dev/demo purposes:
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          var transaction = orderData.purchase_units[0].payments.captures[0];
+
+          // Display toast success message
+          var toastHTML =
+            '<span>Thanks for your order! <br><br>You will soon get your tickets by email. <br><br>If you have any questions just get in touch.</span><button onclick="this.parentElement.remove()" class="btn-flat toast-action">X</button>';
+          M.toast({
+            html: toastHTML,
+            displayLength: Infinity
+          });
+
+          // Submit HTML Form with customer details
+          document.getElementById("customerForm").submit();
+
+        });
       }
+    }).render('#paypal-button-container');
+  </script>
 
-    },
+  <!-- Accordion Script -->
+  <script>
 
-    // Finalize the transaction after payer approval
-    onApprove: function (data, actions) {
-      return actions.order.capture().then(function (orderData) {
-        // Successful capture! For dev/demo purposes:
-        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-        var transaction = orderData.purchase_units[0].payments.captures[0];
 
-        // Display toast success message
-        var toastHTML = '<span>Thanks for your order! <br><br>You will soon get your tickets by email. <br><br>If you have any questions just get in touch.</span><button onclick="this.parentElement.remove()" class="btn-flat toast-action">X</button>';
-        M.toast({html: toastHTML, displayLength: Infinity});
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-        // Submit HTML Form with customer details
-        document.getElementById("customerForm").submit();
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
 
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
       });
     }
-  }).render('#paypal-button-container');
+  </script>
+
+  <script>
+
+    var galleryButton = document.querySelector('.accordion-3');
+    
+    window.addEventListener('DOMContentLoaded', openGallery);
+
+    function openGallery(e) {
+
+      if (window.innerWidth >= 600) {
+          galleryButton.click();
+          galleryButton.focus();
+        }
+    } 
+    
+
+  </script>
+
+
+<script>
+
+document.getElementById("body").onscroll = function myFunction() {  
+    var scrolltotop = document.scrollingElement.scrollTop;
+    var target = document.getElementById("lp-container");
+    var xvalue = "center";
+    var factor = 0.5;
+    var yvalue = scrolltotop * factor;
+    target.style.backgroundPosition = xvalue + " " + yvalue + "px";
+  }
+
 </script>
 
 
- <!-- Compiled and minified JavaScript -->
- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-
-
-
 </body>
+
 </html>
 
 
