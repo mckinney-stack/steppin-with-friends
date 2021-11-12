@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,6 +117,7 @@
     margin: 10vw auto;
     display: block;
     width: 100%;
+    overflow: visible;
   }
 
   /* PAYPAL BUTTONS */
@@ -180,7 +182,6 @@
     color: rgb(197, 197, 197);
     margin-bottom: 5vw;
 }
-  }
 
   .booking-terms2 {
     font-size: 12px;
@@ -211,6 +212,7 @@
     background-color: #03733F;
     color: #FDE4B8;
     padding: 10vw;
+    padding-bottom: 40vw;
     text-align: justify;
     word-break: normal !important;
   }
@@ -267,42 +269,39 @@ over it (hover) */
 .accordion-1.active {
   background-color: #037242ee;
   color: #fde2b2;
+  width: 92% !important;
 }
 
 .accordion-1:focus {
   background-color: #037242ee !important;
   color: #fde2b2;
+  width: 92% !important;
 }
 
 .accordion-2.active {
   background-color: #012f8cdc;
   color: #fde2b2;
+  width: 92% !important;
 }
 
 .accordion-2:focus {
   background-color: #012f8cdc !important;
   color: #fde2b2;
+  width: 92% !important;
 }
 
 .accordion-3.active {
   background-color: #f69103d5 !important;
   color: #fde2b2;
+  width: 92% !important;
 }
 
 .accordion-3:focus {
   background-color: #f69103d5 !important;
   color: #fde2b2;
+  width: 92% !important;
 }
 
-.accordion-4.active {
-  background-color: #c60000c9 !important;
-  color: #fde2b2;
-}
-
-.accordion-4:focus {
-  background-color: #c60000c9 !important;
-  color: #fde2b2;
-}
 
 .accordion:focus {
   width: 92% !important;
@@ -415,6 +414,16 @@ button.accordion {
 
 /* Desktop Styles */
 @media only screen and (min-width: 600px) {
+
+  
+  .toast {
+    background-color: #03733F;
+    color: #FDE4B8;
+    padding: 5vw;
+    padding-bottom: 5vw;
+    text-align: justify;
+    word-break: normal !important;
+  }
 
   .hide-on-small {
   visibility: visible;
@@ -686,8 +695,8 @@ button.accordion {
       <div class="accordion-container">
 
       <!-- TICKETS FORM SECTION -->
-      <button class="accordion accordion-1">Tickets</button>
-      <div class="panel panel-1">
+      <button onclick="changeBtn1();" class="accordion accordion-1">Tickets</button>
+      <div id="panel-1 "class="panel panel-1">
         <div class="section-container">
 
           <p class="tickets-subheading">Steppin' with Friends 001</p>
@@ -742,7 +751,7 @@ button.accordion {
                       <p class="cathDonation">All profit goes to <a href="https://cath.org.uk/" target="_blank">Chester
                           Aid to
                           the Homeless</a></p>
-                      <p class="form-subheading">Add a donation</p>
+                      <p class="form-subheading">Add a contribution</p>
                     </div>
                     <i class="pound-prefix">£<input style="width: 95%; text-align: center;" id="donate" name="donation"
                         placeholder="10" type="number" min="0" maxlength="3" class="validate"></i>
@@ -769,7 +778,7 @@ button.accordion {
             <!-- PAYPAL BUTTONS -->
             <!-- Add the SDK -->
             <script
-              src="https://www.paypal.com/sdk/js?client-id=Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa&currency=GBP&locale=en_GB">
+              src="https://www.paypal.com/sdk/js?client-id=Aa86KX-BrvnrL8GAKuc9b4kh68FK2CfPIoaYUYK-wzVHTVMByiVZRYcLb95w4W775acn7Kz9_UO0JJOa&currency=GBP&locale=en_GB&vault=true">
             </script>
             <!-- Set up a container element for the button -->
             <div id="paypal-button-container"></div>
@@ -780,7 +789,7 @@ button.accordion {
       </div>
 
       <!-- LISTEN -->
-      <button class="accordion accordion-2">Radio</button>
+      <button onclick="changeBtn2();" class="accordion accordion-2">Radio</button>
       <div class="panel panel-2">
         <!-- LISTEN SECTION -->
         <div class="section-container">
@@ -794,7 +803,7 @@ button.accordion {
       </div>
 
       <!-- GALLERY -->
-      <button class="accordion accordion-3">Gallery</button>
+      <button onclick="changeBtn3();" class="accordion accordion-3">Gallery</button>
       <div class="panel panel-3">
         <div class="section-container">
           <div>
@@ -803,14 +812,6 @@ button.accordion {
           </div>
         </div>
       </div>
-
-      <!-- CONTACT SECTION -->
-      <!-- <button class="accordion accordion-4">Contact</button>
-      <div class="panel panel-4">
-        <div class="section-container">
-          
-        </div>
-      </div> -->
 
       </div>
 
@@ -893,7 +894,7 @@ button.accordion {
 
           // Error message
           var formIncorrectToast =
-            '<span>Info not valid. Please double check your details are correct and all fields are filled in.</span>';
+            '<span id="redToast">Info not valid. Please double check your details are correct and all fields are filled in.</span><button onclick="this.parentElement.remove()" class="btn-flat toast-action">X</button>';
           M.toast({
             html: formIncorrectToast
           });
@@ -951,6 +952,7 @@ for (i = 0; i < acc.length; i++) {
     var acc = document.getElementsByClassName("accordion");
     var i;
     
+    
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -962,8 +964,10 @@ for (i = 0; i < acc.length; i++) {
         }
       });
     }
+
   </script>
 
+<!-- Open Gallery tab on DOM Content Loaded for Desktop -->
   <script>
 
     var galleryButton = document.querySelector('.accordion-3');
@@ -982,18 +986,6 @@ for (i = 0; i < acc.length; i++) {
   </script>
 
 
-<script>
-
-document.getElementById("body").onscroll = function myFunction() {  
-    var scrolltotop = document.scrollingElement.scrollTop;
-    var target = document.getElementById("lp-container");
-    var xvalue = "center";
-    var factor = 0.5;
-    var yvalue = scrolltotop * factor;
-    target.style.backgroundPosition = xvalue + " " + yvalue + "px";
-  }
-
-</script>
 
 
 </body>
