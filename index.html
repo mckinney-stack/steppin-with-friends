@@ -688,10 +688,63 @@ button.accordion {
 }
 
 
+
+
+/* TRANSITIONS */
+
+.transition-3 {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: 101;
+    /* background-image: url(images/SWF-cover.jpg); */
+    background-color: #fde2b2;
+    transition: 0.35s ease-out; 
+    background-size: 200%;
+    transition: 0.7s ease-out; 
+    transform: rotate(180deg);
+}
+
+.transition-3.is-active {
+    top: 0;
+}
+
+.transition-3 .logo-slogan-container {
+  transform: rotate(180deg);
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  top: 40%;
+}
+
+.rotating-logo {
+  width: 40%;
+  animation: rotation 0.7s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 </style>
 
 <body id="body">
-
+  
+    <!-- TRANSITION ELEMENT -->
+    <div class="transition transition-3 is-active">
+      <div class="logo-slogan-container">
+        <img class="rotating-logo" src="images/SWF_LOGO_FINAL_TREATED.png" alt="">
+        <h5>A non-profit party.</h5>
+      </div>
+    </div>
+    
   <div class="header">
     <div class="cover-photo2">
     </div>
@@ -1009,6 +1062,37 @@ for (i = 0; i < acc.length; i++) {
     
 
   </script>
+
+
+<!-- Page Transitions -->
+<script>
+
+window.onload = () => {
+    const transition_el = document.querySelector('.transition');
+    const anchors = document.querySelectorAll('a');
+
+    setTimeout(() => {
+        transition_el.classList.remove('is-active');
+    }, 350);
+
+    for (let i =0; i < anchors.length; i++) {
+        const anchor = anchors[i];
+
+        anchor.addEventListener('click', e => {
+            e.preventDefault();
+            let target = e.target.href;
+
+            transition_el.classList.add('is-active');
+
+            setTimeout(() => {
+                window.location.href = target;
+            }, 350);
+        });
+    }
+}
+
+</script>
+
 
 
 
